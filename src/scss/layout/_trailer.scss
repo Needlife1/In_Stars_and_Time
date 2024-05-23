@@ -1,0 +1,31 @@
+@use "../utilities/variables" as var;
+@use "../utilities/mixins" as mx;
+
+.trailer {
+}
+
+.trailer-text-cover {
+  max-width: 261px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include mx.mq("md") {
+    max-width: 461px;
+  }
+  @include mx.mq("lg") {
+    max-width: 861px;
+  }
+}
+
+.trailer-text {
+  text-align: center;
+  font-size: calc(var.$index * 0.7);
+  line-height: 2em;
+}
+
+.trailer-titel {
+  margin: 7% 0% 3% 0%;
+  text-align: center;
+}

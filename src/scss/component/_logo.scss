@@ -1,0 +1,34 @@
+@use "../utilities/variables" as var;
+@use "../utilities/mixins" as mx;
+
+.logo-container {
+  padding: 5% 0 0 20%;
+  margin-bottom: 80px;
+
+  @include mx.mq("sm", "max") {
+    margin-bottom: 5px;
+  }
+
+  @include mx.mq("md") {
+    margin-bottom: 100px;
+  }
+
+  @include mx.mq("lg") {
+    margin-bottom: 120px;
+  }
+}
+
+.logo {
+  width: calc(15vw + 15vh / 1.3);
+  height: calc(18vw + 18vh / 1.5);
+
+  @include mx.mq("md") {
+    width: calc(20vw + 20vh / 1.5);
+    height: calc(19vw + 19vh / 1.1);
+  }
+
+  @include mx.mq("lg") {
+    width: calc(24vw + 24vh / 1.5);
+    height: calc(23vw + 23vh / 1.1);
+  }
+}

@@ -1,0 +1,26 @@
+@use "../utilities/variables" as var;
+@use "sass:map";
+
+@mixin positioning(
+  $position,
+  $top: 50%,
+  $left: 50%,
+  $transform: translate(-50%, -50%)
+) {
+  position: $position;
+  top: $top;
+  left: $left;
+  transform: $transform;
+}
+
+@mixin mq($bp: sm, $type: min) {
+  @if map.has-key(var.$breakpoints, $bp) {
+    $width: map.get(var.$breakpoints, $bp);
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoint '#{$bp}' not found in \$breakpoints map.";
+  }
+}

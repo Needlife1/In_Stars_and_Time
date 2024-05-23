@@ -1,0 +1,14 @@
+$colors: (
+  "dark-primary": #000000,
+  "light-gradient": #c42525,
+  "dark-gradient": #871c1c,
+  "light-primary": #fff,
+);
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 1200px,
+);
+
+$index: calc(1vw + 1vh);

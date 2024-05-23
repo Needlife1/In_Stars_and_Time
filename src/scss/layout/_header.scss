@@ -1,0 +1,38 @@
+@use "../utilities/variables" as var;
+@use "../utilities/mixins" as mx;
+@use "../utilities/functions" as fn;
+
+.nav {
+  padding: 4% 0;
+}
+
+.nav-list {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    fn.get-color(dark-gradient) 0%,
+    fn.get-color(light-gradient) 100%
+  );
+  border-radius: 20px;
+  font-size: calc(var.$index * 0.5);
+  padding: 6px;
+  width: 100%;
+  height: 40px;
+
+  @include mx.mq("sm", "max") {
+    display: none;
+  }
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
