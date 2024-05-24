@@ -247,10 +247,36 @@ h3 {
   text-align: center;
 }
 
-.screenshots-titel {
-  text-align: center;
+.screenshots {
+  height: 100%;
 }
 
+.screenshots-title {
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.screenshots-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  padding: 0 15% 0 15%;
+}
+
+.screenshots-item {
+  overflow: hidden;
+}
+
+.screenshots-img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.screenshots-img:hover {
+  transform: scale(1.1);
+}
 @media only screen and (min-width: 768px){
   .logo-container {
     margin-bottom: 100px;
@@ -265,8 +291,15 @@ h3 {
   .trailer-text-cover {
     max-width: 461px;
   }
+  .screenshots-list {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+  .screenshots-item {
+    width: calc(50% - 20px);
+  }
 }
-
 @media only screen and (min-width: 1200px){
   .logo-container {
     margin-bottom: 120px;
@@ -282,7 +315,6 @@ h3 {
     max-width: 861px;
   }
 }
-
 @media only screen and (max-width: 576px){
   .logo-container {
     margin-bottom: 5px;
