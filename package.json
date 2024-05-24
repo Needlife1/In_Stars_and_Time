@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-   "dev": "vite",
-    "build": "tsc && vite build --base=/Tic-Tac-Toe-game/",
+    "dev": "vite",
+    "build": "tsc && vite build --base=/in-stars-and-time/",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "watch": "npx vite build --watch"
