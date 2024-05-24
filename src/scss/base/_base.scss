@@ -17,7 +17,8 @@ body {
 h1,
 h2,
 h3 {
-  font-size: calc(var.$index * 2.1);
+  font-size: calc(var.$index * 2);
+  text-transform: uppercase;
 }
 
 .visually-hidden {

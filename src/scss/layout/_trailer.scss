@@ -2,6 +2,7 @@
 @use "../utilities/mixins" as mx;
 
 .trailer {
+  margin-bottom: 9%;
 }
 
 .trailer-text-cover {
@@ -26,6 +27,6 @@
 }
 
 .trailer-titel {
-  margin: 7% 0% 3% 0%;
+  margin: 9% 0% 3% 0%;
   text-align: center;
 }
