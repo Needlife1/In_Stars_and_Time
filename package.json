@@ -13,6 +13,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
+    "@typescript-eslint/typescript-estree": "^7.8.0",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.55.0",
     "fast-glob": "^3.3.2",
@@ -23,12 +24,14 @@
     "sass": "^1.77.0",
     "sharp": "^0.33.3",
     "svgo": "^3.3.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.0",
+    "url": "^0.11.3",
     "vite": "^5.2.0",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-image-optimizer": "^1.1.7",
-    "@typescript-eslint/typescript-estree": "^7.8.0",
-    "ts-node": "^10.9.2",
-    "url": "^0.11.3"
+    "vite-plugin-image-optimizer": "^1.1.7"
+  },
+  "dependencies": {
+    "fslightbox": "^3.4.1"
   }
 }
