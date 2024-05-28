@@ -88,11 +88,30 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
     }
   });
 };
-async function initFsLightbox() {
-  const { FsLightbox } = await __vitePreload(() => import("./index-DnDVOhFa.js").then((n) => n.i), true ? [] : void 0);
-  const fsLightboxInstances = {
-    gallery: new FsLightbox()
-  };
-  console.log(fsLightboxInstances);
+const toggleBtn = document.querySelector(".mob-open-nav");
+const body = document.querySelector("body");
+const mobMenu = document.querySelector(".mob-menu");
+const mobMenuBox = document.querySelector(".mob-menu-box");
+const links = document.querySelectorAll(".link");
+toggleBtn == null ? void 0 : toggleBtn.addEventListener("click", toggleNav);
+links.forEach((link) => {
+  link.addEventListener("click", closeNav);
+});
+function toggleNav() {
+  mobMenu == null ? void 0 : mobMenu.classList.toggle("is-hidden");
+  body == null ? void 0 : body.classList.toggle("no-scroll");
+  mobMenuBox == null ? void 0 : mobMenuBox.classList.toggle("is-visible");
+  toggleBtn == null ? void 0 : toggleBtn.classList.toggle("active");
+  if (mobMenu == null ? void 0 : mobMenu.classList.contains("is-hidden")) {
+    toggleBtn == null ? void 0 : toggleBtn.classList.replace("mob-close-nav", "mob-open-nav");
+  } else {
+    toggleBtn == null ? void 0 : toggleBtn.classList.replace("mob-open-nav", "mob-close-nav");
+  }
 }
-initFsLightbox();
+function closeNav() {
+  mobMenu == null ? void 0 : mobMenu.classList.add("is-hidden");
+  body == null ? void 0 : body.classList.remove("no-scroll");
+  mobMenuBox == null ? void 0 : mobMenuBox.classList.remove("is-visible");
+  toggleBtn == null ? void 0 : toggleBtn.classList.replace("mob-close-nav", "mob-open-nav");
+}
+__vitePreload(() => import("./index-DnDVOhFa.js").then((n) => n.i), true ? [] : void 0);
