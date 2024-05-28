@@ -1,10 +1,6 @@
 @use "../utilities/variables" as var;
 @use "../utilities/mixins" as mx;
 
-.trailer {
-  margin-bottom: 9%;
-}
-
 .trailer-text-cover {
   max-width: 261px;
   margin: 0 auto;
@@ -12,6 +8,9 @@
   flex-direction: column;
   gap: 30px;
 
+  @include mx.mq("wee") {
+    max-width: 300px;
+  }
   @include mx.mq("md") {
     max-width: 461px;
   }
@@ -22,11 +21,8 @@
 
 .trailer-text {
   text-align: center;
-  font-size: calc(var.$index * 0.7);
-  line-height: 2em;
 }
 
 .trailer-titel {
-  margin: 9% 0% 3% 0%;
-  text-align: center;
+  margin-top: 9%;
 }

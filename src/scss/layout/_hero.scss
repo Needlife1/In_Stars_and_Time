@@ -2,26 +2,29 @@
 @use "../utilities/mixins" as mx;
 
 .hero {
-  margin-bottom: 14%;
+  @include mx.mq("wee") {
+    margin-bottom: 16%;
+  }
 
-  @include mx.mq("md") {
-    margin-bottom: 21%;
+  @include mx.mq("interval") {
+    margin-bottom: 13%;
   }
 
   @include mx.mq("lg") {
-    margin-bottom: 25%;
+    margin-bottom: 9%;
   }
 }
 
 .hero-list {
-  @include mx.mq("sm", "max") {
-    flex-direction: column;
+  @include mx.mq("interval", max) {
+    max-width: 220px;
     gap: 5px;
   }
-
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 15px;
 }
 

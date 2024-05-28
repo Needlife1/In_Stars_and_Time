@@ -1,17 +1,33 @@
 @use "../utilities/variables" as var;
 @use "../utilities/functions" as fn;
+@use "../utilities/mixins" as mx;
 
 body {
   background-image: url("https://static.wixstatic.com/media/d23daf_39f78beaf2674585b690db578ea32480~mv2.jpg/v1/fill/w_1221,h_7313,al_t,q_90,enc_auto/d23daf_39f78beaf2674585b690db578ea32480~mv2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: top;
   font-family: "Press Start 2P", system-ui;
-  margin: 0;
-  padding: 0;
   color: fn.get-color(light-primary);
   background-color: fn.get-color(dark-primary);
-  padding-bottom: 50px;
   letter-spacing: 0.5px;
+  line-height: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  text-align: center;
+
+  overflow-x: hidden;
+
+  @include mx.mq("md") {
+    line-height: 2em;
+  }
+}
+
+main {
+  width: 100%;
 }
 
 h1,
@@ -19,15 +35,16 @@ h2,
 h3 {
   font-size: calc(var.$index * 2);
   text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3%;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+p {
+  font-size: calc((1vw + 1vh) * 0.7);
+}
+
+section {
+  margin-bottom: 5%;
+  padding: 20px;
+  width: 100%;
 }

@@ -1,0 +1,53 @@
+@use "../utilities/mixins" as mx;
+
+.features-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: transparent;
+  -webkit-box-shadow: inset 200px 200px 200px 200px rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: inset 200px 200px 200px 200px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 200px 200px 200px 200px rgba(255, 255, 255, 0.1);
+  margin: 0 auto;
+  padding: 4%;
+  border-radius: 30px;
+  max-width: 1400px;
+
+  @include mx.mq("sm") {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include mx.mq("lg") {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.features-text-box {
+  flex-grow: 1;
+  max-width: 50%;
+}
+
+.features-text {
+  display: block;
+  max-width: 100%;
+}
+
+.features-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: 4 / 3;
+
+  @include mx.mq("sm") {
+    max-width: 50%;
+    height: 200px;
+  }
+}

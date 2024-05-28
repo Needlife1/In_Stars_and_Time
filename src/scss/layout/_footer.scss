@@ -1,0 +1,128 @@
+@use "../utilities/mixins" as mx;
+@use "../utilities/functions" as fn;
+@use "../utilities/variables" as var;
+
+footer {
+  background-color: fn.get-color(dark-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  width: 100%;
+
+  @include mx.mq("lg") {
+    gap: 20px;
+    padding: 25px;
+  }
+}
+
+.footer-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+
+  @include mx.mq("md") {
+    gap: 100px;
+  }
+}
+
+.footer-item {
+  text-transform: uppercase;
+  font-size: calc((1vw + 1vh) * 0.7);
+
+  &:hover {
+    filter: brightness(0.5);
+  }
+}
+
+.footer-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 20px;
+}
+
+.footer-logo {
+  transition: transform 0.3s ease;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+}
+
+.footer-line {
+  &::before {
+    content: "";
+    display: inline-block;
+    background-color: fn.get-color(light-primary);
+    width: 2px;
+    height: 100px;
+
+    @include mx.mq("md") {
+      height: 80px;
+    }
+  }
+}
+
+.footer-title {
+  font-size: calc(var.$index * 0.7);
+  margin: 0;
+  margin-bottom: 10px;
+
+  @include mx.mq("md") {
+    margin-bottom: 20px;
+  }
+}
+
+.footer-contacts-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  height: 100%;
+
+  @include mx.mq("md") {
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+  }
+}
+
+.footer-contacts-link {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: fn.get-color(light-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s ease,
+    fill 0.3s ease;
+
+  & > svg {
+    transition: transform 0.4s ease;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: fn.get-color(dark-primary);
+    fill: fn.get-color(light-primary);
+
+    & > svg {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.footer-text {
+  font-size: calc((1vw + 1vh) * 0.4);
+  margin-bottom: 15px;
+}

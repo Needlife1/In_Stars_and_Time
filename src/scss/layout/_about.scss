@@ -1,0 +1,19 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.about-box {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  max-width: 860px;
+}
+
+.about-img {
+  width: 100%;
+  height: 80%;
+}

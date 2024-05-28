@@ -1,0 +1,54 @@
+@use "../utilities/functions" as fn;
+
+.btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    90deg,
+    fn.get-color(dark-gradient) 0%,
+    fn.get-color(light-gradient) 100%
+  );
+  -webkit-box-shadow: 2px 1px 20px 0px rgba(135, 28, 28, 1);
+  -moz-box-shadow: 2px 1px 20px 0px rgba(135, 28, 28, 1);
+  box-shadow: 2px 1px 20px 0px rgba(135, 28, 28, 1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mob-btn {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  fill: fn.get-color(light-primary);
+  z-index: 3;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.line {
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.top,
+.bottom {
+  transform-origin: center;
+}
+
+.mob-btn.active .top {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mob-btn.active .middle {
+  opacity: 0;
+}
+
+.mob-btn.active .bottom {
+  transform: rotate(-45deg) translate(5px, -5px);
+}

@@ -2,8 +2,14 @@
 @use "../utilities/mixins" as mx;
 @use "../utilities/functions" as fn;
 
+header {
+  width: 100%;
+}
+
 .nav {
-  padding: 4% 0;
+  @include mx.mq("sm", min) {
+    padding: 4% 0;
+  }
 }
 
 .nav-list {
@@ -28,7 +34,7 @@
   width: 100%;
   height: 40px;
 
-  @include mx.mq("sm", "max") {
+  @include mx.mq("interval", max) {
     display: none;
   }
 

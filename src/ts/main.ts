@@ -1,11 +1,4 @@
 import '../scss/main.scss';
+import('fslightbox');
 
-async function initFsLightbox() {
-  const { FsLightbox } = await import('fslightbox');
-  const fsLightboxInstances = {
-    gallery: new FsLightbox(),
-  };
-  console.log(fsLightboxInstances);
-}
-
-initFsLightbox();
+import './mob-menu';
