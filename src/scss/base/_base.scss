@@ -18,9 +18,7 @@ body {
   justify-content: flex-start;
   width: 100%;
   text-align: center;
-
   overflow-x: hidden;
-
   @include mx.mq("md") {
     line-height: 2em;
   }

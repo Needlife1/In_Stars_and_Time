@@ -1,0 +1,20 @@
+@use "../utilities/functions" as fn;
+@use "../utilities/mixins" as mx;
+
+.swiper.mob {
+  @include mx.mq("md", min) {
+    display: none;
+  }
+}
+
+.swiper-pagination > span {
+  background: linear-gradient(
+    90deg,
+    fn.get-color(dark-gradient) 0%,
+    fn.get-color(light-gradient) 100%
+  );
+}
+
+.swiper .sb {
+  color: fn.get-color(dark-gradient);
+}
