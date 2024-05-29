@@ -1,3 +1,4 @@
+import { g as getDefaultExportFromCjs } from "./index-fNsy7mGu.js";
 function _mergeNamespaces(n, m) {
   for (var i = 0; i < m.length; i++) {
     const e = m[i];
@@ -16,9 +17,6 @@ function _mergeNamespaces(n, m) {
     }
   }
   return Object.freeze(Object.defineProperty(n, Symbol.toStringTag, { value: "Module" }));
-}
-function getDefaultExportFromCjs(x) {
-  return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
 }
 var fslightbox = { exports: {} };
 (function(module, exports) {
