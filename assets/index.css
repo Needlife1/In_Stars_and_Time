@@ -235,15 +235,18 @@ section {
   right: -120px;
 }
 
+footer, .footer-list, .partners-box, .features-box, .about, .hero-list, .hero-link, .nav-list, .nav-link, .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .btn {
   width: 45px;
   height: 45px;
   border-radius: 50%;
   background: linear-gradient(90deg, #871c1c 0%, #c42525 100%);
   box-shadow: 2px 1px 20px 0px rgb(135, 28, 28);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .mob-btn {
@@ -316,21 +319,39 @@ section {
   color: #871c1c;
 }
 
+.join {
+  width: 150px;
+  height: 79px;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  z-index: 100;
+  transform: translateX(-110%);
+  transition: transform 0.3s ease;
+}
+
+.join-btn {
+  fill: #fff;
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease filter 0.3s ease;
+}
+.join-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(0.9);
+}
+
 header {
   width: 100%;
 }
 
 .nav-list {
-  display: flex;
   gap: 15px;
-  align-items: center;
-  justify-content: center;
 }
 
 .nav-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: linear-gradient(90deg, #871c1c 0%, #c42525 100%);
   border-radius: 20px;
   font-size: calc((1vw + 1vh) * 0.5);
@@ -347,9 +368,6 @@ header {
 
 .hero-list {
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   gap: 15px;
 }
@@ -357,9 +375,6 @@ header {
 .hero-link {
   width: calc(8vw + 8vh);
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: transform 0.6s ease;
 }
 .hero-link:hover {
@@ -385,15 +400,14 @@ header {
 }
 
 .screenshots-list {
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 15px;
   padding: 0 15% 0 15%;
   display: none;
-  flex-direction: row;
   gap: 20px;
-  justify-content: center;
 }
 
 .screenshots-item {
@@ -411,10 +425,7 @@ header {
 }
 
 .about {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 30px;
 }
 
@@ -431,9 +442,6 @@ header {
 }
 
 .features-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
   background-color: transparent;
@@ -466,17 +474,11 @@ header {
 }
 
 .partners-box {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 footer {
   background-color: #000000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   gap: 10px;
   padding: 15px;
@@ -484,9 +486,6 @@ footer {
 }
 
 .footer-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 15px;
   margin-bottom: 15px;
 }
@@ -575,6 +574,10 @@ footer {
     height: calc((1vw + 1vh) * 21);
     left: calc((1vw + 1vh) * 2);
   }
+  .join {
+    width: 180px;
+    height: 92px;
+  }
   .hero {
     margin-bottom: 16%;
   }
@@ -631,6 +634,14 @@ footer {
   .swiper.mob {
     display: none;
   }
+  .join {
+    width: 220px;
+    height: 120px;
+  }
+  .join-btn {
+    width: 30px;
+    height: 30px;
+  }
   .trailer-text-cover {
     max-width: 461px;
   }
@@ -664,6 +675,14 @@ footer {
   .logo {
     width: calc((1vw + 1vh) * 35);
     height: calc((1vw + 1vh) * 35);
+  }
+  .join {
+    width: 320px;
+    height: 180px;
+  }
+  .join-btn {
+    width: 40px;
+    height: 40px;
   }
   .hero {
     margin-bottom: 9%;

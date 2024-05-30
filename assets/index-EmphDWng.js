@@ -5670,7 +5670,21 @@ const swiper = new Swiper(".swiper", {
 swiper.on("slideChange", () => {
   console.log("Slide changed");
 });
-__vitePreload(() => import("./index-ByTo9DCc.js").then((n) => n.i), true ? [] : void 0);
+document.addEventListener("DOMContentLoaded", () => {
+  const closeBtn = document.querySelector(".join-btn");
+  const join = document.querySelector(".join");
+  setTimeout(() => {
+    if (join) {
+      join.style.transform = "translateX(0)";
+    }
+  }, 8e3);
+  closeBtn == null ? void 0 : closeBtn.addEventListener("click", () => {
+    if (join) {
+      join.style.transform = "translateX(-100%)";
+    }
+  });
+});
+__vitePreload(() => import("./index-CjdA2vj-.js").then((n) => n.i), true ? [] : void 0);
 export {
   getDefaultExportFromCjs as g
 };
