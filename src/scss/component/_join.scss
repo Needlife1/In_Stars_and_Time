@@ -1,0 +1,54 @@
+@use "../utilities/functions" as fn;
+@use "../utilities/mixins" as mx;
+@use "../utilities/variables" as var;
+
+.join {
+  width: 150px;
+  height: 79px;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  z-index: 100;
+
+  @include mx.mq("wee") {
+    width: 180px;
+    height: 92px;
+  }
+
+  @include mx.mq("md") {
+    width: 220px;
+    height: 120px;
+  }
+
+  @include mx.mq("lg") {
+    width: 320px;
+    height: 180px;
+  }
+
+  transform: translateX(-110%);
+  transition: transform 0.3s ease;
+}
+
+.join-btn {
+  fill: fn.get-color(light-primary);
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease filter 0.3s ease;
+
+  @include mx.mq("md") {
+    width: 30px;
+    height: 30px;
+  }
+
+  @include mx.mq("lg") {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+  }
+}

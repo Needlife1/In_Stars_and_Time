@@ -1,8 +1,8 @@
+@use "../utilities/placeholders";
+
 .about {
-  display: flex;
+  @extend %flex-center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 30px;
 }
 

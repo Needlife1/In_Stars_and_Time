@@ -1,12 +1,11 @@
 @use "../utilities/mixins" as mx;
 @use "../utilities/functions" as fn;
 @use "../utilities/variables" as var;
+@use "../utilities/placeholders";
 
 footer {
   background-color: fn.get-color(dark-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-center;
   flex-direction: column;
   gap: 10px;
   padding: 15px;
@@ -19,9 +18,7 @@ footer {
 }
 
 .footer-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-center;
   gap: 15px;
   margin-bottom: 15px;
 

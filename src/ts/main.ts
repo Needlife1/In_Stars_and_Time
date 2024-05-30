@@ -4,3 +4,4 @@ import('fslightbox');
 import './mob-menu';
 import './aos';
 import './swiper';
+import './join';

@@ -1,9 +1,8 @@
 @use "../utilities/mixins" as mx;
+@use "../utilities/placeholders";
 
 .features-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-center;
   flex-wrap: wrap;
   gap: 20px;
   background-color: transparent;

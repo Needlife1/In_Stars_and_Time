@@ -2,17 +2,14 @@
 @use "../utilities/variables" as var;
 
 .screenshots-list {
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 15px;
   padding: 0 15% 0 15%;
-
   display: none;
-
-  flex-direction: row;
   gap: 20px;
-  justify-content: center;
 
   @include mx.mq("md") {
     display: flex;

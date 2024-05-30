@@ -1,6 +1,7 @@
 @use "../utilities/variables" as var;
 @use "../utilities/mixins" as mx;
 @use "../utilities/functions" as fn;
+@use "../utilities/placeholders";
 
 header {
   width: 100%;
@@ -13,16 +14,12 @@ header {
 }
 
 .nav-list {
-  display: flex;
+  @extend %flex-center;
   gap: 15px;
-  align-items: center;
-  justify-content: center;
 }
 
 .nav-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-center;
   background: linear-gradient(
     90deg,
     fn.get-color(dark-gradient) 0%,
