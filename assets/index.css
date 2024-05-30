@@ -117,10 +117,6 @@ meter {
 }
 
 body {
-  background-image: url("https://static.wixstatic.com/media/d23daf_39f78beaf2674585b690db578ea32480~mv2.jpg/v1/fill/w_1221,h_7313,al_t,q_90,enc_auto/d23daf_39f78beaf2674585b690db578ea32480~mv2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
   font-family: "Press Start 2P", system-ui;
   color: #fff;
   background-color: #000000;
@@ -133,6 +129,13 @@ body {
   width: 100%;
   text-align: center;
   overflow-x: hidden;
+}
+
+.bg {
+  background-image: url("https://static.wixstatic.com/media/d23daf_39f78beaf2674585b690db578ea32480~mv2.jpg/v1/fill/w_1221,h_7313,al_t,q_90,enc_auto/d23daf_39f78beaf2674585b690db578ea32480~mv2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 main {
@@ -341,6 +344,21 @@ footer, .footer-list, .partners-box, .features-box, .about, .hero-list, .hero-li
 .join-btn:hover {
   transform: scale(1.1);
   filter: brightness(0.9);
+}
+
+.contact {
+  background-image: url("https://static.wixstatic.com/media/d23daf_1a03f160de514d0b9ff413bd5a99cf09~mv2.jpg/v1/fill/w_971,h_901,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d23daf_1a03f160de514d0b9ff413bd5a99cf09~mv2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.contact-form {
+  width: 600px;
+  height: 600px;
+  background-color: black;
+  border-radius: 20px;
 }
 
 header {
