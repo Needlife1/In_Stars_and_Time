@@ -1,7 +1,6 @@
 @use "../utilities/functions" as fn;
 @use "../utilities/mixins" as mx;
 @use "../utilities/variables" as var;
-
 .join {
   width: 150px;
   height: 79px;
@@ -35,7 +34,15 @@
   height: 25px;
   margin-left: 5px;
   cursor: pointer;
-  transition: transform 0.3s ease filter 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
 
   @include mx.mq("md") {
     width: 30px;
@@ -51,4 +58,24 @@
     transform: scale(1.1);
     filter: brightness(0.9);
   }
+}
+
+.join-btn .middle,
+.join-btn .bottom {
+  width: 65%;
+  height: 1.5px;
+  background-color: fn.get-color(light-primary);
+}
+
+.join-btn .bottom {
+  position: relative;
+  top: 0;
+}
+
+.join-btn .middle {
+  transform: translateY(0.5px) rotate(45deg);
+}
+
+.join-btn .bottom {
+  transform: translateY(-3px) rotate(-45deg);
 }

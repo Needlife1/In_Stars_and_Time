@@ -27,10 +27,16 @@
   fill: fn.get-color(light-primary);
   z-index: 3;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 }
 
 .line {
+  background-color: fn.get-color(light-primary);
+  border-radius: 2px;
+  height: 2.5px;
+  left: 0;
+  width: 50%;
+
   transition:
     transform 0.3s ease,
     opacity 0.3s ease;
@@ -42,7 +48,7 @@
 }
 
 .mob-btn.active .top {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: translateY(7px) translateY(-50%) rotate(-45deg);
 }
 
 .mob-btn.active .middle {
@@ -50,5 +56,5 @@
 }
 
 .mob-btn.active .bottom {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: translateY(-8px) translateY(70%) rotate(45deg);
 }

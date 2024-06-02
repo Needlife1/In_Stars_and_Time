@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   closeBtn?.addEventListener('click', () => {
     if (join) {
-      join.style.transform = 'translateX(-100%)';
+      join.style.transform = 'translateX(-110%)';
     }
   });
 });
