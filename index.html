@@ -13,21 +13,63 @@
     href="https://static.wixstatic.com/media/d23daf_f36903dc00434913b75589beb6da295b%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/d23daf_f36903dc00434913b75589beb6da295b%7Emv2.png"
     type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <meta property="og:title" content="In Stars and Time | turn-based rpg">
+  <meta property="og:description"
+    content="In Stars and Time is a turn-based RPG that follows a group of adventurers at the end of their journey to defeat a king who is slowly freezing the land in time. Following an uncomfortably close encounter with a trap, party leader Siffrin discovers they are actually stuck in a time loop, able to start the day over again with nobody else the wiser. Now available for PlayStation 4 and 5, Nintendo Switch, and PC!">
+  <meta property="og:image"
+    content="https://static.wixstatic.com/media/d23daf_0a441358f28349649be781042f268c4a~mv2.jpg/v1/fill/w_1440,h_900,al_c/d23daf_0a441358f28349649be781042f268c4a~mv2.jpg">
+  <meta property="og:image:width" content="1440">
+  <meta property="og:image:height" content="900">
+  <meta property="og:url" content="https://www.instarsandtime.com">
+  <meta property="og:site_name" content="In Stars and Time">
+  <meta property="og:type" content="website">
   <title>In Stars and Time</title>
-  <script type="module" crossorigin src="/In_Stars_and_Time/assets/main-CqsD7ncS.js"></script>
+
+  <style>
+    @font-face {
+      font-display: swap;
+      font-family: 'Press Start 2P';
+      font-style: normal;
+      font-weight: 400;
+      src: url('/In_Stars_and_Time/assets/press-start-2p-v15-latin-regular.woff2') format('woff2'),
+        url('/In_Stars_and_Time/assets/press-start-2p-v15-latin-regular.woff') format('woff'),
+    }
+
+    body {
+      font-family: 'Press Start 2P', monospace;
+      letter-spacing: 0.5px;
+      line-height: 1.2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      text-align: center;
+      overflow-x: hidden;
+
+    }
+
+    .bg {
+      background-image: url("https://static.wixstatic.com/media/d23daf_39f78beaf2674585b690db578ea32480~mv2.jpg/v1/fill/w_1221,h_7313,al_t,q_90,enc_auto/d23daf_39f78beaf2674585b690db578ea32480~mv2.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+  </style>
+
+  <script type="module" crossorigin src="/In_Stars_and_Time/assets/main-J_pgHeF2.js"></script>
   <link rel="stylesheet" crossorigin href="/In_Stars_and_Time/assets/main.css">
 </head>
 
 <body class="bg">
   <header id="header">
     <nav class="nav">
+
       <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="#trailer">Trailer</a></li>
-        <li class="nav-item"><a class="nav-link" href="#screenshots">Screenshots</a></li>
-        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+        <li class="nav-item"><a class="nav-link scroll" href="#trailer">Trailer</a></li>
+        <li class="nav-item"><a class="nav-link scroll" href="#screenshots">Screenshots</a></li>
+        <li class="nav-item"><a class="nav-link scroll" href="#features">Features</a></li>
         <li class="nav-item"><a class="nav-link" href="https://presskits.armorgames.com/game/in-stars-and-time/"
             target="_blank" rel="noopener noreferrer nofollow">Presskit</a></li>
         <li class="nav-item"><a class="nav-link" href="https://store.steampowered.com/app/1677310/In_Stars_And_Time/"
@@ -37,7 +79,7 @@
     </nav>
 
     <div class="mob-btn-box">
-      <button class="btn mob-btn mob-open-nav" type="button">
+      <button class="btn mob-btn mob-open-nav" type="button" style=" transform: translate(-50%, -150%);">
         <span class="line top"></span>
         <span class="line middle"></span>
         <span class="line bottom"></span>
@@ -49,9 +91,9 @@
 
       <nav class="mob-nuv">
         <ul class="mob-nuv-list">
-          <li class="mob-nuv-item"><a class="mob-link link" href="#trailer">Trailer</a></li>
-          <li class="mob-nuv-item"><a class="mob-link link" href="#screenshots">Screenshots</a></li>
-          <li class="mob-nuv-item"><a class="mob-link link" href="#features">Features</a></li>
+          <li class="mob-nuv-item"><a class="mob-link link scroll" href="#trailer">Trailer</a></li>
+          <li class="mob-nuv-item"><a class="mob-link link scroll" href="#screenshots">Screenshots</a></li>
+          <li class="mob-nuv-item"><a class="mob-link link scroll" href="#features">Features</a></li>
           <li class="mob-nuv-item"><a class="mob-link" href="https://presskits.armorgames.com/game/in-stars-and-time/"
               target="_blank" rel="noopener noreferrer nofollow">Presskit</a></li>
           <li class="mob-nuv-item"><a class="mob-link"
@@ -327,7 +369,7 @@
           referrerpolicy="strict-origin-when-cross-origin" title="In Stars and Time Launch Announcement Trailer"
           width="100%" height="100%"
           src="https://www.youtube.com/embed/d8dlOpCOKVU?autoplay=0&amp;mute=0&amp;controls=1&amp;loop=0&amp;origin=https%3A%2F%2Fwww.instarsandtime.com&amp;playsinline=1&amp;enablejsapi=1&amp;widgetid=1"
-          id="widget2"></iframe>
+          id="widget2" loading="lazy"></iframe>
       </div>
     </section>
 
@@ -339,14 +381,14 @@
             href="https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 5x">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 5x"
-              alt="screenshot" width="280" height="210"></a>
+              alt="screenshot" width="280" height="210" loading="lazy"></a>
         </li>
         <li class="screenshots-item">
           <a data-fslightbox
             href="https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 5x">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 5x"
-              alt="screenshot" width="280" height="210">
+              alt="screenshot" width="280" height="210" loading="lazy">
           </a>
         </li>
         <li class="screenshots-item">
@@ -354,7 +396,7 @@
             href="https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 5x">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 5x"
-              alt="screenshot" width="280" height="210">
+              alt="screenshot" width="280" height="210" loading="lazy">
           </a>
         </li>
         <li class="screenshots-item">
@@ -362,7 +404,7 @@
             href="https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 5x">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 5x"
-              alt="screenshot" width="280" height="210">
+              alt="screenshot" width="280" height="210" loading="lazy">
           </a>
         </li>
         <li class="screenshots-item">
@@ -370,7 +412,7 @@
             href="https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 5x">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 5x"
-              alt="screenshot" width="280" height="210">
+              alt="screenshot" width="280" height="210" loading="lazy">
           </a>
         </li>
         <li class="screenshots-item">
@@ -378,7 +420,7 @@
             href="https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 5x">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 5x"
-              alt="screenshot" width="280" height="210">
+              alt="screenshot" width="280" height="210" loading="lazy">
           </a>
         </li>
         <li class="screenshots-item">
@@ -386,7 +428,7 @@
             href="https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_360,h_270,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_720,h_540,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_1080,h_810,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 5x">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_360,h_270,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_720,h_540,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_1080,h_810,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 5x"
-              alt="screenshot" width="280" height="210">
+              alt="screenshot" width="280" height="210" loading="lazy">
           </a>
         </li>
         <li class="screenshots-item">
@@ -394,7 +436,7 @@
             href="https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_359,h_270,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_718,h_540,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_1077,h_810,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_1370,h_1030,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_1370,h_1030,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 5x">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_359,h_270,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_718,h_540,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_1077,h_810,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_1370,h_1030,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_1370,h_1030,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 5x"
-              alt="screenshot" width="280" height="210">
+              alt="screenshot" width="280" height="210" loading="lazy">
           </a>
         </li>
       </ul>
@@ -405,40 +447,40 @@
           <div class="swiper-slide">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_60538bc461a345c393438398e903345d~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_60538bc461a345c393438398e903345d~mv2.webp 5x"
-              alt="screenshot" width="280" height="210">
+              alt="screenshot" width="280" height="210" loading="lazy">
           </div>
           <div class="swiper-slide">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_9db6684b3a7c4f18b4c147a6ca0232e6~mv2.webp 5x"
-              alt="screenshot" width="280" height="210">
+              alt="screenshot" width="280" height="210" loading="lazy">
           </div>
           <div class="swiper-slide">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_4b5956c8624c470ba9c8250aaf7fccc2~mv2.webp 5x"
-              alt="screenshot" width="280" height="210">
+              alt="screenshot" width="280" height="210" loading="lazy">
           </div>
           <div class="swiper-slide">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_17fda954c2834c72bc2958cdac717b9e~mv2.webp 5x"
-              alt="screenshot" width="280" height="210">
+              alt="screenshot" width="280" height="210" loading="lazy">
           </div>
           <div class="swiper-slide">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_5cb140aab77e43ccafe788ae13590b3b~mv2.webp 5x"
-              alt="screenshot" width="280" height="210">
+              alt="screenshot" width="280" height="210" loading="lazy">
           </div>
           <div class="swiper-slide">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_280,h_210,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_560,h_420,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_840,h_630,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_1120,h_840,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_8534eb5d270a41be86d2b53572014705~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_8534eb5d270a41be86d2b53572014705~mv2.webp 5x"
-              alt="screenshot" width="280" height="210">
+              alt="screenshot" width="280" height="210" loading="lazy">
           </div>
           <div class="swiper-slide"><img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_360,h_270,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_720,h_540,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_1080,h_810,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.png/v1/fill/w_1372,h_1029,q_90/f685f0_d546986adbf747e0a9d7fbefbc03654b~mv2.webp 5x"
-              alt="screenshot" width="280" height="210"></div>
+              alt="screenshot" width="280" height="210" loading="lazy"></div>
           <div class="swiper-slide">
             <img class="screenshots-img"
               src="https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_359,h_270,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 1x, https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_718,h_540,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 2x, https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_1077,h_810,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 3x, https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_1370,h_1030,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 4x, https://static.wixstatic.com/media/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.png/v1/fill/w_1370,h_1030,q_90/f685f0_5e3eff4a3d9949d9885478cbf8df43be~mv2.webp 5x"
-              alt="screenshot" width="280" height="210">
+              alt="screenshot" width="280" height="210" loading="lazy">
           </div>
         </div>
 
@@ -458,7 +500,7 @@
           loop, able to start the day over again with nobody else the wiser.</p>
         <img class="about-img"
           src="https://static.wixstatic.com/media/d23daf_3d967d7b6a184bb1a4705b7dce3ffc93~mv2.png/v1/fill/w_980,h_550,al_c,q_90,enc_auto/menu%20for%20website_980x550.png"
-          alt="Four heroes look at the midget" width="800" height="449">
+          alt="Four heroes look at the midget" width="800" height="449" loading="lazy">
         <p class="about-bottom-text">But what seems like a handy trick to ensure victory quickly begins to weigh on
           Siffrin as he experiences the loop over
           and over with no end in sight. Unwilling to open up to their friends and companions, and with the literal
@@ -478,7 +520,7 @@
 
         <img class="features-img"
           src="https://static.wixstatic.com/media/d23daf_197304f6f2634a72ba0c5ba9449d7434~mv2.jpg/v1/fill/w_575,h_413,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ISaT%20feature%201.jpg"
-          alt="screenshot" width="460" height="330">
+          alt="screenshot" width="460" height="330" loading="lazy">
 
       </div>
 
@@ -489,7 +531,7 @@
 
         <img class="features-img"
           src="https://static.wixstatic.com/media/d23daf_0bb8d13ba42748248783cf7eacae86bf~mv2.jpg/v1/fill/w_575,h_413,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ISaT%20feature%202.jpg"
-          alt="screenshot" width="460" height="330">
+          alt="screenshot" width="460" height="330" loading="lazy">
 
       </div>
 
@@ -500,7 +542,7 @@
 
         <img class="features-img"
           src="https://static.wixstatic.com/media/d23daf_77f4bbc20e914bb09325ec55fd77762b~mv2.jpg/v1/fill/w_575,h_413,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ISaT%20feature%203.jpg"
-          alt="screenshot" width="460" height="330">
+          alt="screenshot" width="460" height="330" loading="lazy">
 
       </div>
     </section>
@@ -508,11 +550,12 @@
     <section class="partners">
       <div class="partners-box ">
         <a href="https://www.insertdisc5.com/" target="_blank" rel="noreferrer noopener"><img
-            class="wow wow animate__animated animate__fadeIn" src="/In_Stars_and_Time/assets/insertdisc.png" alt="insertdisc5"></a>
+            class="wow wow animate__animated animate__fadeIn" src="/In_Stars_and_Time/assets/insertdisc.png" alt="insertdisc5"
+            loading="lazy"></a>
         <h2 style="margin: 0;">&</h2>
         <a href="https://armorgamesstudios.com/" target="_blank" rel="noreferrer noopener"><img
-            class="wow animate__animated animate__fadeIn" src="/In_Stars_and_Time/assets/In_Stars_and_Time1.png"
-            alt="armor-games"></a>
+            class="wow animate__animated animate__fadeIn" src="/In_Stars_and_Time/assets/In_Stars_and_Time1.png" alt="armor-games"
+            loading="lazy"></a>
       </div>
     </section>
   </main>
@@ -534,7 +577,7 @@
     <div class="footer-box">
       <a class="footer-logo" href="#header"><img
           src="https://presskits.armorgames.com/game/in-stars-and-time/images/icon.png" alt="Logo" width="151"
-          height="165"></a>
+          height="165" loading="lazy"></a>
 
       <div class="footer-line"></div>
 
@@ -580,7 +623,8 @@
     </button>
 
     <a class="join-link" href="https://discord.com/invite/ZzFSRUBXEC" target="_blank" rel="noreferrer noopener">
-      <img class="join-img" src="/In_Stars_and_Time/assets/join-discord.png" alt="join-discord" width="350" height="202"></a>
+      <img class="join-img" src="/In_Stars_and_Time/assets/join-discord.png" alt="join-discord" width="350" height="202"
+        loading="lazy"></a>
   </div>
 
 

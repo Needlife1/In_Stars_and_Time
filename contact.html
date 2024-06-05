@@ -13,21 +13,50 @@
         href="https://static.wixstatic.com/media/d23daf_f36903dc00434913b75589beb6da295b%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/d23daf_f36903dc00434913b75589beb6da295b%7Emv2.png"
         type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>In Stars and Time</title>
-  <script type="module" crossorigin src="/In_Stars_and_Time/assets/main-CqsD7ncS.js"></script>
+    <meta property="og:title" content="In Stars and Time | turn-based rpg">
+    <meta property="og:description"
+        content="In Stars and Time is a turn-based RPG that follows a group of adventurers at the end of their journey to defeat a king who is slowly freezing the land in time. Following an uncomfortably close encounter with a trap, party leader Siffrin discovers they are actually stuck in a time loop, able to start the day over again with nobody else the wiser. Now available for PlayStation 4 and 5, Nintendo Switch, and PC!">
+    <meta property="og:image"
+        content="https://static.wixstatic.com/media/d23daf_0a441358f28349649be781042f268c4a~mv2.jpg/v1/fill/w_1440,h_900,al_c/d23daf_0a441358f28349649be781042f268c4a~mv2.jpg">
+    <meta property="og:image:width" content="1440">
+    <meta property="og:image:height" content="900">
+    <meta property="og:url" content="https://www.instarsandtime.com">
+    <meta property="og:site_name" content="In Stars and Time">
+    <meta property="og:type" content="website">
+  <script type="module" crossorigin src="/In_Stars_and_Time/assets/main-J_pgHeF2.js"></script>
   <link rel="stylesheet" crossorigin href="/In_Stars_and_Time/assets/main.css">
 </head>
 
 <body class="contact">
+
+    <div class="notification successful is-hidden">
+        <h3 class="notification-title">Successful</h3>
+        <p class="notification-text">Thank you for your feedback, we will contact you as soon as possible.</p>
+        <img class="notification-img" src="/In_Stars_and_Time/assets/mob-removebg-preview.png" alt="" width="180" height="190px">
+        <a class="notification-link btn" href="./index.html">Ok</a>
+    </div>
+
+    <div class="notification not-successful is-hidden">
+        <h3 class="notification-title">Error</h3>
+        <p class="notification-text">Something went wrong, please try again later.</p>
+        <img class="notification-img" src="/In_Stars_and_Time/assets/error.png" alt="" width="180" height="190px">
+        <img class="notification-img-zzz" src="/In_Stars_and_Time/assets/error2.png" alt="zzzz" width="100" height="70px">
+        <a class="btn notification-link" href="./index.html">Ok</a>
+    </div>
+
     <form class="contact-form">
+        <a class="btn contact-btn-close" href="./index.html">
+            <span class="line middle"></span>
+            <span class="line bottom"></span></a>
+
         <h2 class="contact-title">Contact</h2>
-        <input type="text">
-        <input type="text">
-        <textarea name="" id=""></textarea>
-        <button>Send</button>
+
+        <input class="contact-input" type="text" placeholder="Name" name="name" type="text">
+        <input class="contact-input" type="email" placeholder="Email" name="email" type="text">
+        <textarea class="contact-textarea" type="text" placeholder="Message" name="message" id=""></textarea>
+
+        <button class="btn contact-btn" type="submit">Send</button>
     </form>
 
 </body>
