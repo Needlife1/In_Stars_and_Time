@@ -2,10 +2,24 @@
 @use "../utilities/functions" as fn;
 @use "../utilities/mixins" as mx;
 
+@font-face {
+  font-display: swap;
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("./src/fonts/press-start-2p-v15-latin-regular.woff2") format("woff2"),
+    url("./src/fonts/press-start-2p-v15-latin-regular.woff") format("woff");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Press Start 2P", system-ui;
   color: fn.get-color(light-primary);
   background-color: fn.get-color(dark-primary);
+  font-family: "Press Start 2P", monospace;
   letter-spacing: 0.5px;
   line-height: 1.2em;
   display: flex;
@@ -18,13 +32,6 @@ body {
   @include mx.mq("md") {
     line-height: 2em;
   }
-}
-
-.bg {
-  background-image: url("https://static.wixstatic.com/media/d23daf_39f78beaf2674585b690db578ea32480~mv2.jpg/v1/fill/w_1221,h_7313,al_t,q_90,enc_auto/d23daf_39f78beaf2674585b690db578ea32480~mv2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
 }
 
 main {

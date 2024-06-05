@@ -1,3 +1,5 @@
+@use "../utilities/functions" as fn;
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -17,4 +19,8 @@
 
 .no-scroll {
   overflow: hidden;
+}
+
+#error {
+  border: 2px solid fn.get-color(light-gradient);
 }

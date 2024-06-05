@@ -3,4 +3,9 @@
 .partners-box {
   @extend %flex-center;
   flex-direction: column;
+
+  & > a:focus {
+    display: inline-block;
+    transform: scale(1.1);
+  }
 }

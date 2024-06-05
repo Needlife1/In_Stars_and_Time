@@ -3,5 +3,7 @@ import('fslightbox');
 
 import './mob-menu';
 import './scrollreveal';
+import './smoothScroll';
 import './swiper';
 import './join';
+import './contact';

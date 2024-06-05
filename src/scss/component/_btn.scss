@@ -17,6 +17,11 @@
   box-shadow: 2px 1px 20px 0px rgba(135, 28, 28, 1);
 
   @extend %flex-center;
+
+  &:hover {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+  }
 }
 
 .mob-btn {

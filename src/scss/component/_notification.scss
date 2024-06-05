@@ -1,0 +1,102 @@
+@use "../utilities/mixins" as mx;
+@use "../utilities/functions" as fn;
+@use "../utilities/variables" as var;
+
+.notification {
+  width: 300px;
+  height: 320px;
+  border-radius: 12px;
+  background-color: fn.get-color(dark-primary);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  overflow: hidden;
+
+  @include mx.mq("md") {
+    width: 400px;
+    height: 420px;
+    padding: 45px;
+  }
+
+  @include mx.mq("lg") {
+    width: 600px;
+    height: 620px;
+    padding: 65px;
+  }
+}
+
+.notification-title {
+  margin-bottom: 30px;
+  @include mx.mq("lg") {
+    margin-bottom: 45px;
+  }
+}
+
+.not-successful > h3 {
+  color: fn.get-color(error);
+}
+
+.successful > h3 {
+  color: fn.get-color(successful);
+}
+
+.notification-img {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+
+  @include mx.mq("md") {
+    width: 230px;
+    height: 240px;
+  }
+
+  @include mx.mq("lg") {
+    width: 370px;
+    height: 380px;
+  }
+}
+
+.notification-img-zzz {
+  position: absolute;
+  right: 100px;
+  bottom: 70px;
+
+  @include mx.mq("md") {
+    width: 150px;
+    height: 100px;
+    right: 130px;
+    bottom: 80px;
+  }
+
+  @include mx.mq("lg") {
+    width: 200px;
+    height: 130px;
+    right: 230px;
+    bottom: 140px;
+  }
+}
+
+.notification-link {
+  position: absolute;
+  bottom: 30px;
+  left: 45px;
+  width: 55px;
+  height: 55px;
+
+  @include mx.mq("md") {
+    width: 75px;
+    height: 75px;
+    bottom: 40px;
+    left: 55px;
+  }
+
+  @include mx.mq("lg") {
+    width: 100px;
+    height: 100px;
+    bottom: 55px;
+    left: 70px;
+  }
+}

@@ -31,7 +31,8 @@ footer {
   text-transform: uppercase;
   font-size: calc((1vw + 1vh) * 0.7);
 
-  &:hover {
+  &:hover,
+  &:focus {
     filter: brightness(0.5);
   }
 }

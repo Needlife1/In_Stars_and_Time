@@ -5,6 +5,7 @@ const mobMenuBox: Element | null = document.querySelector('.mob-menu-box');
 const links: NodeListOf<Element> = document.querySelectorAll('.link');
 
 toggleBtn?.addEventListener('click', toggleNav);
+mobMenu?.addEventListener('click', toggleNav);
 links.forEach((link: Element) => {
   link.addEventListener('click', closeNav);
 });
