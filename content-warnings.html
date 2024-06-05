@@ -24,6 +24,50 @@
     <meta property="og:site_name" content="In Stars and Time">
     <meta property="og:type" content="website">
     <title>In Stars and Time</title>
+
+    <style>
+        @font-face {
+            font-display: swap;
+            font-family: 'Press Start 2P';
+            font-style: normal;
+            font-weight: 400;
+            src: url('/In_Stars_and_Time/assets/press-start-2p-v15-latin-regular.woff2') format('woff2'),
+                url('/In_Stars_and_Time/assets/press-start-2p-v15-latin-regular.woff') format('woff'),
+        }
+
+        body {
+            font-family: 'Press Start 2P', monospace;
+            letter-spacing: 0.5px;
+            line-height: 1.2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            text-align: center;
+            overflow-x: hidden;
+
+        }
+
+        .content-warnings-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 0 50px 0 50px;
+            max-width: 80%;
+            margin: 70px auto;
+
+        }
+
+        .content-warning-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 80px;
+            margin-top: 80px;
+        }
+    </style>
   <script type="module" crossorigin src="/In_Stars_and_Time/assets/main-J_pgHeF2.js"></script>
   <link rel="stylesheet" crossorigin href="/In_Stars_and_Time/assets/main.css">
 </head>
@@ -34,7 +78,7 @@
         <nav class="nav">
 
             <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../../index">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="../../index.html#trailer">Trailer</a></li>
                 <li class="nav-item"><a class="nav-link" href="../../index.html#screenshots">Screenshots</a></li>
                 <li class="nav-item"><a class="nav-link" href="../../index.html#features">Features</a></li>
@@ -92,8 +136,7 @@
                 src="https://static.wixstatic.com/media/d23daf_3d967d7b6a184bb1a4705b7dce3ffc93~mv2.png/v1/fill/w_980,h_342,al_c,q_85,enc_auto/d23daf_3d967d7b6a184bb1a4705b7dce3ffc93~mv2.png"
                 alt="" width="980" height="350" loading="lazy">
 
-            <div
-                style="display: flex; flex-direction: column; align-items: center; gap: 40px; margin-top: 40px; padding: 0 50px 0 50px;">
+            <div class="content-warnings-box">
                 <h1>CONTENT WARNINGS</h1>
                 <p>In Stars and Time contains infrequent scenes and references to subject matter that may be sensitive
                     to some individuals.
@@ -108,7 +151,7 @@
                     should be mindful of their own comfort level. More in-depth information is provided below.
                 </p>
 
-                <ul style="display: flex; flex-direction: column; align-items: center; gap: 60px;">
+                <ul class="content-warning-list">
                     <li>
                         <h3>Trauma/Mental Illness</h3>
                         <p>The protagonist's constant timeloops take a toll on their mental health, and they become more
