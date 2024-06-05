@@ -2,16 +2,6 @@
 @use "../utilities/functions" as fn;
 @use "../utilities/mixins" as mx;
 
-@font-face {
-  font-display: swap;
-  font-family: "Press Start 2P";
-  font-style: normal;
-  font-weight: 400;
-  src:
-    url("./src/fonts/press-start-2p-v15-latin-regular.woff2") format("woff2"),
-    url("./src/fonts/press-start-2p-v15-latin-regular.woff") format("woff");
-}
-
 html {
   scroll-behavior: smooth;
 }
