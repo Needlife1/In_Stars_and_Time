@@ -1,0 +1,38 @@
+.star {
+  position: absolute;
+  pointer-events: none;
+}
+
+@keyframes fall-1 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-3 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+}
+
+.fa-star {
+  font-family: "FontAwesome";
+}

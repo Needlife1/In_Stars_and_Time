@@ -7,3 +7,4 @@ import './smoothScroll';
 import './swiper';
 import './join';
 import './contact';
+import './animated-cursor';
