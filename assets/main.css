@@ -348,7 +348,6 @@ footer, .footer-list, .partners-box, .features-box, .about, .hero-list, .hero-li
   width: 25px;
   height: 25px;
   margin-left: 5px;
-  cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -416,6 +415,42 @@ footer, .footer-list, .partners-box, .features-box, .about, .hero-list, .hero-li
   left: 45px;
   width: 55px;
   height: 55px;
+}
+
+.star {
+  position: absolute;
+  pointer-events: none;
+}
+
+@keyframes fall-1 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+@keyframes fall-2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+}
+@keyframes fall-3 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+}
+.fa-star {
+  font-family: "FontAwesome";
 }
 
 header {

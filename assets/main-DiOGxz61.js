@@ -1184,7 +1184,7 @@ var boundDestroy;
 var boundReveal;
 var boundClean;
 var boundSync;
-var config;
+var config$1;
 var debug;
 var instance;
 function ScrollReveal(options) {
@@ -1200,7 +1200,7 @@ function ScrollReveal(options) {
   }
   var buffer;
   try {
-    buffer = config ? deepAssign({}, config, options) : deepAssign({}, defaults$2, options);
+    buffer = config$1 ? deepAssign({}, config$1, options) : deepAssign({}, defaults$2, options);
   } catch (e) {
     logger.call(this, "Invalid configuration.", e.message);
     return mount.failure();
@@ -1214,13 +1214,13 @@ function ScrollReveal(options) {
     logger.call(this, e.message);
     return mount.failure();
   }
-  config = buffer;
-  if (!config.mobile && isMobile() || !config.desktop && !isMobile()) {
+  config$1 = buffer;
+  if (!config$1.mobile && isMobile() || !config$1.desktop && !isMobile()) {
     logger.call(
       this,
       "This device is disabled.",
-      "desktop: " + config.desktop,
-      "mobile: " + config.mobile
+      "desktop: " + config$1.desktop,
+      "mobile: " + config$1.mobile
     );
     return mount.failure();
   }
@@ -1253,7 +1253,7 @@ function ScrollReveal(options) {
     return boundSync;
   } });
   Object.defineProperty(this, "defaults", { get: function() {
-    return config;
+    return config$1;
   } });
   Object.defineProperty(this, "version", { get: function() {
     return version;
@@ -8562,4 +8562,66 @@ function send(user) {
     notSuccessful == null ? void 0 : notSuccessful.classList.remove("is-hidden");
   });
 }
+let start = (/* @__PURE__ */ new Date()).getTime();
+const originPosition = { x: 0, y: 0 };
+const last = {
+  starTimestamp: start,
+  starPosition: originPosition,
+  mousePosition: originPosition
+};
+const config = {
+  starAnimationDuration: 1500,
+  minimumTimeBetweenStars: 250,
+  minimumDistanceBetweenStars: 75,
+  colors: ["55 55 55", "252 254 255"],
+  sizes: ["1.4rem", "1rem", "0.6rem"],
+  animations: ["fall-1", "fall-2", "fall-3"]
+};
+let count = 0;
+const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min, selectRandom = (items) => items[rand(0, items.length - 1)];
+const withUnit = (value, unit) => `${value}${unit}`, px = (value) => withUnit(value, "px"), ms = (value) => withUnit(value, "ms");
+const calcDistance = (a, b) => {
+  const diffX = b.x - a.x, diffY = b.y - a.y;
+  return Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
+};
+const calcElapsedTime = (start2, end) => end - start2;
+const appendElement = (element) => document.body.appendChild(element), removeElement = (element, delay) => setTimeout(() => document.body.removeChild(element), delay);
+const createStar = (position) => {
+  const star = document.createElement("span"), color = selectRandom(config.colors);
+  star.className = "star fa-star";
+  star.style.left = px(position.x);
+  star.style.top = px(position.y);
+  star.style.fontSize = selectRandom(config.sizes);
+  star.style.color = `rgb(${color})`;
+  star.style.textShadow = `0px 0px 1.5rem rgb(${color} / 0.5)`;
+  star.style.animationName = config.animations[count++ % 3];
+  star.style.animationDuration = ms(config.starAnimationDuration);
+  appendElement(star);
+  removeElement(star, config.starAnimationDuration);
+};
+const updateLastStar = (position) => {
+  last.starTimestamp = (/* @__PURE__ */ new Date()).getTime();
+  last.starPosition = position;
+};
+const updateLastMousePosition = (position) => {
+  last.mousePosition = position;
+};
+const adjustLastMousePosition = (position) => {
+  if (last.mousePosition.x === 0 && last.mousePosition.y === 0) {
+    last.mousePosition = position;
+  }
+};
+const handleOnMove = (e) => {
+  const mousePosition = "touches" in e ? { x: e.touches[0].pageX, y: e.touches[0].pageY } : { x: e.pageX, y: e.pageY };
+  adjustLastMousePosition(mousePosition);
+  const now2 = (/* @__PURE__ */ new Date()).getTime(), hasMovedFarEnough = calcDistance(last.starPosition, mousePosition) >= config.minimumDistanceBetweenStars, hasBeenLongEnough = calcElapsedTime(last.starTimestamp, now2) > config.minimumTimeBetweenStars;
+  if (hasMovedFarEnough || hasBeenLongEnough) {
+    createStar(mousePosition);
+    updateLastStar(mousePosition);
+  }
+  updateLastMousePosition(mousePosition);
+};
+window.onmousemove = (e) => handleOnMove(e);
+window.ontouchmove = (e) => handleOnMove(e);
+document.body.onmouseleave = () => updateLastMousePosition(originPosition);
 __vitePreload(() => import("./index-DnDVOhFa.js").then((n) => n.i), true ? [] : void 0);
